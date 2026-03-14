@@ -2,20 +2,40 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
+
+<!-- Important for mobile responsiveness -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Weather Dashboard</title>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
 <div class="container">
 
+<!-- Search -->
+
 <div class="search">
-<input type="text" id="cityInput" placeholder="Enter city name">
-<button onclick="getWeather()">Search</button>
+
+<input 
+type="text" 
+id="cityInput" 
+placeholder="Enter city name"
+>
+
+<button onclick="getWeather()">
+Search
+</button>
+
 </div>
+
+
+<!-- Dashboard -->
 
 <div class="dashboard">
 
@@ -23,13 +43,17 @@
 
 <div class="current card">
 
-<div>
+<div class="current-info">
+
 <h2 id="city">City</h2>
+
 <h1 id="temp">--°C</h1>
+
 <p id="condition"></p>
+
 </div>
 
-<img id="icon">
+<img id="icon" alt="weather icon">
 
 </div>
 
@@ -62,4 +86,5 @@
 <script src="script.js"></script>
 
 </body>
+
 </html>
