@@ -9,11 +9,11 @@ body{
 
 min-height:100vh;
 
+background:linear-gradient(to bottom,#3b82f6,#9333ea);
+
 display:flex;
 justify-content:center;
 align-items:center;
-
-background:linear-gradient(to bottom,#3b82f6,#9333ea);
 
 padding:20px;
 
@@ -22,38 +22,42 @@ padding:20px;
 /* container */
 
 .container{
+
 width:100%;
 max-width:1100px;
+
 }
 
 /* search */
 
 .search{
+
 margin-bottom:20px;
 display:flex;
 gap:10px;
-flex-wrap:wrap;
+
 }
 
 .search input{
 
+flex:1;
+
 padding:10px;
 border:none;
 border-radius:6px;
-flex:1;
 
 }
 
 .search button{
 
-padding:10px 14px;
+padding:10px 15px;
 border:none;
 border-radius:6px;
 cursor:pointer;
 
 }
 
-/* dashboard layout */
+/* dashboard */
 
 .dashboard{
 
@@ -75,7 +79,7 @@ backdrop-filter:blur(12px);
 
 border-radius:20px;
 
-padding:25px;
+padding:20px;
 
 color:white;
 
@@ -86,16 +90,14 @@ color:white;
 .current{
 
 display:flex;
-
 justify-content:space-between;
-
 align-items:center;
 
 }
 
 .current img{
 
-width:110px;
+width:90px;
 
 }
 
@@ -119,13 +121,13 @@ gap:10px;
 
 text-align:center;
 
-font-size:14px;
+width:60px;
 
 }
 
 .hour img{
 
-width:30px;
+width:28px;
 
 }
 
@@ -134,34 +136,30 @@ width:30px;
 .forecast{
 
 display:flex;
-
 flex-direction:column;
-
-gap:10px;
+gap:12px;
 
 }
 
 .forecast-item{
 
 display:flex;
-
 justify-content:space-between;
-
 align-items:center;
 
 }
 
 .forecast-item img{
 
-width:30px;
+width:28px;
 
 }
 
-/* -------------------------- */
-/* 📱 Tablet Responsive */
-/* -------------------------- */
+/* ---------------- */
+/* 📱 MOBILE */
+/* ---------------- */
 
-@media (max-width:900px){
+@media (max-width:768px){
 
 .dashboard{
 
@@ -172,20 +170,16 @@ grid-template-columns:1fr;
 .current{
 
 flex-direction:column;
-
-gap:15px;
-
+gap:10px;
 text-align:center;
 
 }
 
+.search{
+
+flex-direction:column;
+
 }
-
-/* -------------------------- */
-/* 📱 Mobile Responsive */
-/* -------------------------- */
-
-@media (max-width:600px){
 
 .hourly-grid{
 
@@ -196,12 +190,6 @@ justify-content:center;
 .hour{
 
 width:70px;
-
-}
-
-.search{
-
-flex-direction:column;
 
 }
 
