@@ -2,12 +2,12 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial;
+font-family:Arial, sans-serif;
 }
 
 body{
 
-height:100vh;
+min-height:100vh;
 
 display:flex;
 justify-content:center;
@@ -15,30 +15,36 @@ align-items:center;
 
 background:linear-gradient(to bottom,#3b82f6,#9333ea);
 
+padding:20px;
+
 }
 
 /* container */
 
 .container{
-width:1100px;
+width:100%;
+max-width:1100px;
 }
 
 /* search */
 
 .search{
 margin-bottom:20px;
+display:flex;
+gap:10px;
+flex-wrap:wrap;
 }
 
-input{
+.search input{
 
 padding:10px;
 border:none;
 border-radius:6px;
-width:220px;
+flex:1;
 
 }
 
-button{
+.search button{
 
 padding:10px 14px;
 border:none;
@@ -55,15 +61,11 @@ display:grid;
 
 grid-template-columns:2fr 1fr;
 
-/* height increase */
-
-grid-template-rows:220px 240px;
-
 gap:20px;
 
 }
 
-/* glass card */
+/* cards */
 
 .card{
 
@@ -93,25 +95,23 @@ align-items:center;
 
 .current img{
 
-width:120px;
+width:110px;
 
 }
 
-/* today's forecast */
-
-.hourly{
-
-grid-column:1 / 2;
-
-}
+/* hourly */
 
 .hourly-grid{
 
 display:flex;
 
-justify-content:space-around;
+justify-content:space-between;
 
 margin-top:15px;
+
+flex-wrap:wrap;
+
+gap:10px;
 
 }
 
@@ -129,11 +129,15 @@ width:30px;
 
 }
 
-/* 7 day forecast */
+/* forecast */
 
 .forecast{
 
-height:460px;   /* this makes box longer */
+display:flex;
+
+flex-direction:column;
+
+gap:10px;
 
 }
 
@@ -145,12 +149,60 @@ justify-content:space-between;
 
 align-items:center;
 
-margin-top:12px;
-
 }
 
 .forecast-item img{
 
-width:35px;
+width:30px;
+
+}
+
+/* -------------------------- */
+/* 📱 Tablet Responsive */
+/* -------------------------- */
+
+@media (max-width:900px){
+
+.dashboard{
+
+grid-template-columns:1fr;
+
+}
+
+.current{
+
+flex-direction:column;
+
+gap:15px;
+
+text-align:center;
+
+}
+
+}
+
+/* -------------------------- */
+/* 📱 Mobile Responsive */
+/* -------------------------- */
+
+@media (max-width:600px){
+
+.hourly-grid{
+
+justify-content:center;
+
+}
+
+.hour{
+
+width:70px;
+
+}
+
+.search{
+
+flex-direction:column;
+
+}
 
 }
