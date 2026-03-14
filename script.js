@@ -2,7 +2,7 @@ async function getWeather(){
 
 let city=document.getElementById("cityInput").value;
 
-let url=`http://api.weatherapi.com/v1/forecast.json?key=cf31daade6954c7d98951828261403&q=${city}&days=7&aqi=yes`;
+let url=`https://api.weatherapi.com/v1/forecast.json?key=cf31daade6954c7d98951828261403&q=${city}&days=7&aqi=yes`;
 
 let res=await fetch(url);
 
